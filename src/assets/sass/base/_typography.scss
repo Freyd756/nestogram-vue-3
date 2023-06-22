@@ -1,0 +1,147 @@
+/*
+Copyright: JustCoded Ltd is the owner or the licensee of all intellectual property rights in this file.
+    These are protected by copyright laws and treaties around the world.
+    You must not make copies via any medium or download any extracts from any part of this file unless expressly authorised to do so.
+License: https://lenderkit.com/license
+Website: https://lenderkit.com/
+
+Package: lenderkit-webapp
+*/
+
+// Typography
+//
+// Base font styles for headings and links.
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+.h {
+  margin: 0 0 0.4em;
+  color: var(--webapp-text-03);
+  font-weight: var(--base-headings-font-weight);
+  font-family: var(--base-headings-font-family);
+}
+
+h1,
+.h1 {
+  font-weight: var(--base-h1-font-weight);
+  font-size: var(--base-h1-font-size);
+  line-height: $h1-line-height;
+  letter-spacing: 1px;
+
+  [dir='rtl'] & {
+    letter-spacing: normal;
+  }
+
+  @include media('<desktop') {
+    margin-bottom: 54px;
+    font-size: calc(var(--base-h1-font-size) * 0.75);
+    line-height: calc(#{$h1-line-height} * 1.061);
+  }
+
+  @include media('<tablet') {
+    margin-bottom: 39px;
+    font-size: calc(var(--base-h1-font-size) * 0.6);
+    line-height: calc(#{$h1-line-height} * 1.173);
+  }
+}
+
+h2,
+.h2 {
+  font-weight: var(--base-h2-font-weight);
+  font-size: var(--base-h2-font-size);
+  line-height: $h2-line-height;
+
+  @include media('<desktop') {
+    line-height: 1.25;
+  }
+
+  @include media('<tablet') {
+    font-size: calc(var(--base-h2-font-size) * 0.6);
+    line-height: calc(#{$h2-line-height} * 1.25);
+  }
+}
+
+h3,
+.h3 {
+  font-weight: var(--base-h3-font-weight);
+  font-size: var(--base-h3-font-size);
+  letter-spacing: 1px;
+
+  [dir='rtl'] & {
+    letter-spacing: normal;
+  }
+
+  @include media('<tablet') {
+    font-size: 1.7rem;
+    line-height: 1.5;
+  }
+}
+
+h4,
+.h4 {
+  font-weight: var(--base-h4-font-weight);
+  font-size: var(--base-h4-font-size);
+
+  @include media('<desktop') {
+    font-size: calc(var(--base-h4-font-size) * 0.833333);
+  }
+
+  @include media('<tablet') {
+    font-size: calc(var(--base-h4-font-size) * 0.694444);
+  }
+}
+
+h5,
+.h5 {
+  font-weight: var(--base-h5-font-weight);
+  font-size: var(--base-h5-font-size);
+
+  @include media('<=x-widescreen') {
+    font-size: calc(var(--base-h5-font-size) * 1.04);
+  }
+}
+
+h6,
+.h6 {
+  font-weight: var(--base-h6-font-weight);
+  font-size: var(--base-h6-font-size);
+
+  @include media('<=x-widescreen') {
+    font-size: calc(var(--base-h6-font-size) * 1.112);
+  }
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+a {
+  color: var(--webapp-text-03);
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+a[href*='tel'],
+a[href*='mailto'] {
+  [dir='rtl'] & {
+    direction: ltr;
+    unicode-bidi: bidi-override;
+  }
+}
+
+strong {
+  font-weight: 700;
+}
